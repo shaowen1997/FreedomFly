@@ -1,40 +1,40 @@
 package entity;
 
 public class QuanXian {
-    private int id;//id
-    private String name;//权限名
-    private String remarks;//备注
+    private int qxID;//id
+    private String qxName;//权限名
+    private String qxRremarks;//备注
 
-    public int getId() {
-        return id;
+    public int getQxID() {
+        return qxID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setQxID(int qxID) {
+        this.qxID = qxID;
     }
 
-    public String getName() {
-        return name;
+    public String getQxName() {
+        return qxName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setQxName(String qxName) {
+        this.qxName = qxName;
     }
 
-    public String getRemarks() {
-        return remarks;
+    public String getQxRremarks() {
+        return qxRremarks;
     }
 
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
+    public void setQxRremarks(String qxRremarks) {
+        this.qxRremarks = qxRremarks;
     }
 
     @Override
     public String toString() {
         return "QuanXian{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", remarks='" + remarks + '\'' +
+                "qxID=" + qxID +
+                ", qxName='" + qxName + '\'' +
+                ", qxRremarks='" + qxRremarks + '\'' +
                 '}';
     }
 }

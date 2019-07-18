@@ -7,7 +7,7 @@ public class DingdInfo {
     private String dNum;//订单编号
     private String state;//订单状态
     private double price;//价格
-    private int consign;//是否托运
+    private int consign;//是否托运（1：有，2：无）
     private String priceType;//支付方式
     private String evaluate;//评价
     private Date createTime;//创建时间

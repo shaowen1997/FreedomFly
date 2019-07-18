@@ -2,8 +2,8 @@ package entity;
 
 import java.util.Date;
 
-public class FlightInfo {
-    private int id;//ID
+public class AirInfo {
+    private int airID;//ID
     private String airNum;//航班编号
     private String airline;//航空公司
     private String airSpace;//舱位类型
@@ -14,18 +14,18 @@ public class FlightInfo {
     private Date landTime;//降落时间
     private double price;//金额
     private int type;//往返类型（1：单程，2：往返，3：多程）
-    private int specialPassengers;//特殊乘客（1：有，2：无）
-    private int airFood;//航空餐
+    private int specialPassengers;//特殊乘客（1：无，2：有）
+    private int airFood;//航空餐（1：有，2：无）
     private int state;//状态
     private Date createTime;//创建时间
     private Date updateTime;//最后一次修改时间
 
     public int getId() {
-        return id;
+        return airID;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.airID = id;
     }
 
     public String getAirNum() {
@@ -151,7 +151,7 @@ public class FlightInfo {
     @Override
     public String toString() {
         return "FlightInfo{" +
-                "id=" + id +
+                "airID=" + airID +
                 ", airNum='" + airNum + '\'' +
                 ", airline='" + airline + '\'' +
                 ", airSpace='" + airSpace + '\'' +
