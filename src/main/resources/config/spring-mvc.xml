@@ -8,7 +8,7 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
     <context:annotation-config/>
     <!-- 自动扫描包,我们只扫描com.controller包下的类即可,其他的由Spring配置文件管理即可 -->
-    <context:component-scan base-package="com.controller"></context:component-scan>
+    <context:component-scan base-package="com.freedomfly.controller"></context:component-scan>
     <mvc:annotation-driven/>
 
     <!-- 处理静态资源请求 -->

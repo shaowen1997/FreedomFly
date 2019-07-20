@@ -17,16 +17,16 @@
     <!-- 开启Spring的注解,若不添加该项,将来使用@Autowired注解时会报错-->
     <context:annotation-config />
     <!-- 扫描包,将指定包下的含有特殊注解的对象(如@Component,@Service等...)交给Spring IOC容器管理 -->
-    <context:component-scan base-package="com.service" />
-    <context:component-scan base-package="com.serviceImpl"></context:component-scan>
+    <context:component-scan base-package="com.freedomfly.service" />
+    <context:component-scan base-package="com.freedomfly.serviceImpl"></context:component-scan>
 
 
     <!-- 配置数据源 -->
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://localhost:3306/ssm?characterEncoding=UTF-8&amp;useSSL=false"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/freedomfly?characterEncoding=UTF-8&amp;useSSL=false"></property>
         <property name="username" value="root"></property>
-        <property name="password" value="qt1720"></property>
+        <property name="password" value="123456"></property>
     </bean>
 
     <!-- 配置sqlSession属性 -->
@@ -37,7 +37,7 @@
         <!-- 这个属性是必须的 -->
         <property name="dataSource" ref="dataSource"></property>
         <!-- mappLocations: 它表示我们存放Mapper.xml文件的位置 -->
-        <property name="mapperLocations" value="classpath:com/mapper/*.xml"></property>
+        <property name="mapperLocations" value="classpath:com/freedomfly/mapper/mapper.xml"></property>
     </bean>
 
 
