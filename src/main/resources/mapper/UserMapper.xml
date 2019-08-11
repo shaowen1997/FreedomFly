@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.freedomfly.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.freedomfly.entity.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="user_photo" jdbcType="VARCHAR" property="userPhoto" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="phone_number" jdbcType="INTEGER" property="phoneNumber" />
+    <result column="alipay" jdbcType="VARCHAR" property="alipay" />
+    <result column="we_chat" jdbcType="VARCHAR" property="weChat" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+    <result column="update_time" jdbcType="DATE" property="updateTime" />
+    <result column="air_id" jdbcType="INTEGER" property="airId" />
+    <result column="dingd_id" jdbcType="INTEGER" property="dingdId" />
+    <result column="qx_id" jdbcType="INTEGER" property="qxId" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.freedomfly.entity.User">
+    <selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into user (id, user_name, pwd, 
+      user_photo, id_card, name, 
+      phone_number, alipay, we_chat, 
+      email, create_time, update_time, 
+      air_id, dingd_id, qx_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{pwd,jdbcType=VARCHAR}, 
+      #{userPhoto,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{phoneNumber,jdbcType=INTEGER}, #{alipay,jdbcType=VARCHAR}, #{weChat,jdbcType=VARCHAR}, 
+      #{email,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE}, #{updateTime,jdbcType=DATE}, 
+      #{airId,jdbcType=INTEGER}, #{dingdId,jdbcType=INTEGER}, #{qxId,jdbcType=INTEGER}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.freedomfly.entity.User">
+    update user
+    set user_name = #{userName,jdbcType=VARCHAR},
+      pwd = #{pwd,jdbcType=VARCHAR},
+      user_photo = #{userPhoto,jdbcType=VARCHAR},
+      id_card = #{idCard,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      phone_number = #{phoneNumber,jdbcType=INTEGER},
+      alipay = #{alipay,jdbcType=VARCHAR},
+      we_chat = #{weChat,jdbcType=VARCHAR},
+      email = #{email,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=DATE},
+      update_time = #{updateTime,jdbcType=DATE},
+      air_id = #{airId,jdbcType=INTEGER},
+      dingd_id = #{dingdId,jdbcType=INTEGER},
+      qx_id = #{qxId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select id, user_name, pwd, user_photo, id_card, name, phone_number, alipay, we_chat, 
+    email, create_time, update_time, air_id, dingd_id, qx_id
+    from user
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_name, pwd, user_photo, id_card, name, phone_number, alipay, we_chat, 
+    email, create_time, update_time, air_id, dingd_id, qx_id
+    from user
+  </select>
+</mapper>
