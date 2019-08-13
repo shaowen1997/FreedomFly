@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.freedomfly.dao.AirinfoMapper">
+  <resultMap id="BaseResultMap" type="com.freedomfly.entity.AirInfo">
+    <id column="air_id" jdbcType="INTEGER" property="airId" />
+    <result column="air_num" jdbcType="VARCHAR" property="airNum" />
+    <result column="airline" jdbcType="VARCHAR" property="airline" />
+    <result column="air_type" jdbcType="VARCHAR" property="airType" />
+    <result column="air_space" jdbcType="VARCHAR" property="airSpace" />
+    <result column="from_city" jdbcType="VARCHAR" property="fromCity" />
+    <result column="from_time" jdbcType="DATE" property="fromTime" />
+    <result column="land_city" jdbcType="VARCHAR" property="landCity" />
+    <result column="land_time" jdbcType="VARCHAR" property="landTime" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+    <result column="specialPassengers" jdbcType="INTEGER" property="specialpassengers" />
+    <result column="air_food" jdbcType="INTEGER" property="airFood" />
+    <result column="state" jdbcType="INTEGER" property="state" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+    <result column="update_time" jdbcType="DATE" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from airinfo
+    where air_id = #{airId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.freedomfly.entity.AirInfo">
+    insert into airinfo (air_id, air_num, airline, 
+      air_type, air_space, from_city, 
+      from_time, land_city, land_time, 
+      price, type, specialPassengers, 
+      air_food, state, create_time, 
+      update_time)
+    values (#{airId,jdbcType=INTEGER}, #{airNum,jdbcType=VARCHAR}, #{airline,jdbcType=VARCHAR}, 
+      #{airType,jdbcType=VARCHAR}, #{airSpace,jdbcType=VARCHAR}, #{fromCity,jdbcType=VARCHAR}, 
+      #{fromTime,jdbcType=DATE}, #{landCity,jdbcType=VARCHAR}, #{landTime,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DOUBLE}, #{type,jdbcType=INTEGER}, #{specialpassengers,jdbcType=INTEGER}, 
+      #{airFood,jdbcType=INTEGER}, #{state,jdbcType=INTEGER}, #{createTime,jdbcType=DATE}, 
+      #{updateTime,jdbcType=DATE})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.freedomfly.entity.AirInfo">
+    update airinfo
+    set air_num = #{airNum,jdbcType=VARCHAR},
+      airline = #{airline,jdbcType=VARCHAR},
+      air_type = #{airType,jdbcType=VARCHAR},
+      air_space = #{airSpace,jdbcType=VARCHAR},
+      from_city = #{fromCity,jdbcType=VARCHAR},
+      from_time = #{fromTime,jdbcType=DATE},
+      land_city = #{landCity,jdbcType=VARCHAR},
+      land_time = #{landTime,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      type = #{type,jdbcType=INTEGER},
+      specialPassengers = #{specialpassengers,jdbcType=INTEGER},
+      air_food = #{airFood,jdbcType=INTEGER},
+      state = #{state,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=DATE},
+      update_time = #{updateTime,jdbcType=DATE}
+    where air_id = #{airId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select air_id, air_num, airline, air_type, air_space, from_city, from_time, land_city, 
+    land_time, price, type, specialPassengers, air_food, state, create_time, update_time
+    from airinfo
+    where air_id = #{airId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select air_id, air_num, airline, air_type, air_space, from_city, from_time, land_city, 
+    land_time, price, type, specialPassengers, air_food, state, create_time, update_time
+    from airinfo
+  </select>
+</mapper>

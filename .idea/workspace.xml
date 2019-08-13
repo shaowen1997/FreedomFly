@@ -6,25 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f486fd79-b147-4114-9c48-b2c23a2c1774" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/FreedomFly.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IdeaWorkspace.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/freedomfly/entity/AirInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/freedomfly/entity/DingdInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/freedomfly/entity/QuanXian.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/freedomfly/entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/spring-mvc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config/spring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fly.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="f486fd79-b147-4114-9c48-b2c23a2c1774" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,6 +76,23 @@
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="txt" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.local" value="2" />
+          <entry key="git.branch.create.new" value="1" />
+          <entry key="git.branch.merge" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -107,6 +106,11 @@
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sw" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -193,6 +197,30 @@
             <path>
               <item name="FreedomFly" type="b2602c69:ProjectViewProjectNode" />
               <item name="FreedomFly" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreedomFly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreedomFly" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreedomFly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreedomFly" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreedomFly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreedomFly" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FreedomFly" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FreedomFly" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -319,12 +347,20 @@
       <option name="presentableId" value="Default" />
       <updated>1565489545041</updated>
       <workItem from="1565489554963" duration="7505000" />
-      <workItem from="1565528488061" duration="803000" />
+      <workItem from="1565528488061" duration="1499000" />
     </task>
+    <task id="LOCAL-00001" summary="登录界面">
+      <created>1565529482689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565529482689</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8756000" />
+    <option name="totallyTimeSpent" value="9452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -372,6 +408,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="登录界面" />
+    <option name="LAST_COMMIT_MESSAGE" value="登录界面" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/bootstrap.min.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
@@ -411,6 +451,7 @@
             <option name="proportions">
               <list>
                 <option value="0.23207885" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -418,7 +459,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (FreedomFly)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -453,7 +494,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|FreedomFly</last-edited>
+          <last-edited>Web|FreedomFly</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

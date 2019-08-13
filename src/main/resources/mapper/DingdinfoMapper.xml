@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.freedomfly.dao.DingdinfoMapper">
+  <resultMap id="BaseResultMap" type="com.freedomfly.entity.DingdInfo">
+    <id column="dingd_id" jdbcType="INTEGER" property="dingdId" />
+    <result column="d_num" jdbcType="VARCHAR" property="dNum" />
+    <result column="state" jdbcType="VARCHAR" property="state" />
+    <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="consign" jdbcType="INTEGER" property="consign" />
+    <result column="price_type" jdbcType="VARCHAR" property="priceType" />
+    <result column="evaluate" jdbcType="VARCHAR" property="evaluate" />
+    <result column="create_time" jdbcType="DATE" property="createTime" />
+    <result column="update_time" jdbcType="DATE" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from dingdinfo
+    where dingd_id = #{dingdId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.freedomfly.entity.DingdInfo">
+    insert into dingdinfo (dingd_id, d_num, state, 
+      price, consign, price_type, 
+      evaluate, create_time, update_time
+      )
+    values (#{dingdId,jdbcType=INTEGER}, #{dNum,jdbcType=VARCHAR}, #{state,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DOUBLE}, #{consign,jdbcType=INTEGER}, #{priceType,jdbcType=VARCHAR}, 
+      #{evaluate,jdbcType=VARCHAR}, #{createTime,jdbcType=DATE}, #{updateTime,jdbcType=DATE}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.freedomfly.entity.DingdInfo">
+    update dingdinfo
+    set d_num = #{dNum,jdbcType=VARCHAR},
+      state = #{state,jdbcType=VARCHAR},
+      price = #{price,jdbcType=DOUBLE},
+      consign = #{consign,jdbcType=INTEGER},
+      price_type = #{priceType,jdbcType=VARCHAR},
+      evaluate = #{evaluate,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=DATE},
+      update_time = #{updateTime,jdbcType=DATE}
+    where dingd_id = #{dingdId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select dingd_id, d_num, state, price, consign, price_type, evaluate, create_time, 
+    update_time
+    from dingdinfo
+    where dingd_id = #{dingdId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select dingd_id, d_num, state, price, consign, price_type, evaluate, create_time, 
+    update_time
+    from dingdinfo
+  </select>
+</mapper>
