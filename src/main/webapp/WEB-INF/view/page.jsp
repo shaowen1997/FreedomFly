@@ -1,15 +1,7 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Date" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: my-deepin
-  Date: 18-3-17
-  Time: 下午4:28
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
@@ -29,7 +21,7 @@
 <body class="layui-layout-body">
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <div class="layui-logo" style="font-size: 17px;"><strong>文章管理系统</strong></div>
+        <div class="layui-logo" style="font-size: 17px; color: #393D49">航班管理系统</div>
         <ul class="layui-nav layui-layout-left">
             <li class="layui-nav-item"><a href="<%=basePath%>/admin/page.do" style="text-decoration: none;"><strong>首页</strong></a></li>
         </ul>
@@ -37,24 +29,12 @@
             <li class="layui-nav-item">
                 <a href="javascript:;" style="text-decoration: none;">
                     <img src="<%=basePath%>/static/img/avatar.jpg" class="layui-nav-img">
-                    <strong>${sessionScope.name}</strong>
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="" style="text-decoration: none;"><strong>基本资料</strong></a></dd>
-                    <dd><a href="" style="text-decoration: none;"><strong>安全设置</strong></a></dd>
+                    <dd><a href="" style="text-decoration: none;">基本资料</a></dd>
+                    <dd><a href="" style="text-decoration: none;">安全设置</a></dd>
                     <hr/>
-                    <dd><a href="<%=basePath%>/admin/outLogin.do" style="text-decoration: none;;"><strong>退出登录</strong></a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a style="text-decoration: none">
-                    <span class="fa fa-github"></span>
-                    <strong>Github</strong>
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a style="text-decoration: none;"><strong>联系Leader</strong></a></dd>
-                    <hr/>
-                    <dd><a style="text-decoration: none;"><strong>github地址</strong></a></dd>
+                    <dd><a href="<%=basePath%>/admin/outLogin.do" style="text-decoration: none;;">退出登录</a></dd>
                 </dl>
             </li>
             <li class="layui-nav-item"><a href="<%=basePath%>/admin/outLogin.do" style="text-decoration: none;;"><strong>退出</strong></a></li>

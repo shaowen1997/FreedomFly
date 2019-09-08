@@ -6,4 +6,5 @@ package com.freedomfly.controller;
  * Time:21:11
  */
 public class UserController {
+
 }
